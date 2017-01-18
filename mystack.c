@@ -57,6 +57,20 @@ int my_stack_top(my_stack* stack)
     return stack->ptr[stack->count];
 }
 
+int my_stack_deep_search(my_stack* stack, int element, int start, int end)
+{
+	if (stack->count == 0) {
+		return -1;
+	}
+	for (int i = ((stack->count) - start); i < ((stack->count) - end); i++)
+	{
+		if ((int)stack->ptr[i] == element) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
 int my_stack_is_empty(my_stack* stack)
 {
     return stack->count == 0;
