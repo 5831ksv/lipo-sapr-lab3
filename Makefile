@@ -1,9 +1,9 @@
 # Makefile using Lex to build
 
 CC     = gcc
-CFLAGS = -c
+CFLAGS = -c -g
 
-LEX    = lex
+LEX    = flex
 LFLAGS =
 
 LN     = gcc

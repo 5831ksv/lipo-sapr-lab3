@@ -26,6 +26,12 @@ typedef enum {
     LexMinus,
     LexDiv,
     LexMult,
+	MultipConcatenate,
+	MultipIntersection,
+	ElementMultip,
+	MultLeftBracket,
+	MultRightBracket,
+	Delimiter,
     LexEnd,
     LexUnknown,
 } LexType;
