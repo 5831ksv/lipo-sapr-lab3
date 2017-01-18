@@ -56,6 +56,10 @@ number    {digit}+
 \+		{
 		  fprintf(stderr, "plus\n");
 		  return LexPlus; }
+\+m	{
+		  fprintf(stderr, "plus_multiplicity\n");
+		  return MultipConcatenate;
+		}
 \-		{
 		  fprintf(stderr, "minus\n");
 		  return LexMinus; }
@@ -65,6 +69,26 @@ number    {digit}+
 \*		{
 		  fprintf(stderr, "mult\n");
 		  return LexMult; }
+\*m		{
+		  fprintf(stderr, "mult_multiplicity\n");
+		  return MultipIntersection;
+		}
+\[		{
+		  fprintf(stderr, " [ ");
+		  return MultLeftBracket;
+		}
+\]		{
+		  fprintf(stderr, " ] ");
+		  return MultRightBracket;
+		}
+,		{
+		  fprintf(stderr, ",");
+		  return Delimiter;
+		}
+\?		{
+		  fprintf(stderr, " |ElemInMult| ");
+		  return ElementMultip;
+		}
 ^[ \t]*\n	{
 		  fprintf(stderr, "empty line\n");
 		}
