@@ -31,6 +31,8 @@ void my_stack_done(my_stack* stack);
 void my_stack_push(my_stack* stack, int value);
 int my_stack_pull(my_stack* stack);
 
+int my_stack_deep_search(my_stack* stack, int element, int start, int end);
+
 int my_stack_top(my_stack* stack);
 int my_stack_is_empty(my_stack* stack);
 int my_stack_is_full(my_stack* stack);
