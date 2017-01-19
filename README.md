@@ -8,6 +8,6 @@ Calucates expressions in reverse (polska) notations
 Supported:
 * integers
 * 4 math operations (+, -, *, /)
-* concatenation of sets - [] [] +m
-* intersection of sets - [] [] *m
-* entry into a set of item - "item" ? (without quotes)
+* concatenation of sets ([] [] +m)
+* intersection of sets  ([] [] *m)
+* entry into a set of item  ("item" ?) {without quotes}
